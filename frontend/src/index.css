@@ -1,0 +1,228 @@
+
+@import "tailwindcss";
+
+/* =========================================================
+   CAMPUSFIND — GLOBAL STYLES
+   Tailwind CSS v4 compatible
+========================================================= */
+
+/* -------------------------
+   Base
+------------------------- */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+
+    background: #f8fafc;
+    color: #0f172a;
+
+    font-family:
+      Inter,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  ::selection {
+    background: #2563eb;
+    color: #ffffff;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL SAFETY
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   404 PAGE
+========================================================= */
+
+.page-not-found {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.12),
+      transparent 35%
+    ),
+    #f8fafc;
+}
+
+.not-found-content {
+  width: 100%;
+  max-width: 520px;
+
+  padding: 48px 32px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.not-found-number {
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 900;
+
+  color: #2563eb;
+
+  margin-bottom: 20px;
+}
+
+.not-found-content h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.not-found-content p {
+  margin-top: 12px;
+
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.not-found-content a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 24px;
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.not-found-content a:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .not-found-number {
+    font-size: 64px;
+  }
+
+  .not-found-content {
+    padding: 40px 24px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-number {
+    font-size: 56px;
+  }
+
+  .not-found-content {
+    padding: 32px 20px;
+  }
+}
